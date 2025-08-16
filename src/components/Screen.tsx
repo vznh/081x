@@ -1,6 +1,6 @@
 // components/Screen
 "use client"
-import { Pencil2Icon } from "@radix-ui/react-icons";
+import { Pencil2Icon, IdCardIcon } from "@radix-ui/react-icons";
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -42,10 +42,12 @@ const Screen = () => {
           Preorder your own drink
         </Link>
         <Link
-          className="font-PPNeuebit opacity-60 text-white flex flex-row gap-x-2 text-lg"
+          className="font-PPNeuebit opacity-60 text-white flex flex-row gap-x-2 text-lg border rounded-sm px-2 border-white border-opacity-10 items-center"
           href=""
           target="_blank"
         >
+          <IdCardIcon className="w-4 h-4" />
+          RSVP for us!
         </Link>
 
       </div>
