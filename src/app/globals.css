@@ -6,3 +6,8 @@
   font-family: 'PPNeuebit';
   src: url('/PPNeuebit.otf') format('opentype');
 }
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
