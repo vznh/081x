@@ -47,7 +47,7 @@ const Screen = () => {
           target="_blank"
         >
           <IdCardIcon className="w-4 h-4" />
-          RSVP for us!
+          <span className="cursor-pointer hover:text-[#00FF22]">RSVP for us!</span>
         </Link>
 
       </div>

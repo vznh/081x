@@ -47,7 +47,7 @@ export default function Home() {
       />
 
       <div
-        className="absolute top-24 left-24 z-20">
+        className="absolute top-24 left-24 z-50">
         <Screen />
       </div>
 
