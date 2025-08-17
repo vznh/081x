@@ -4,10 +4,24 @@
 
 @font-face {
   font-family: 'PPNeuebit';
-  src: url('/PPNeuebit.otf') format('opentype');
+  src: url('/fonts/PPNeuebit.otf') format('opentype');
 }
 
 html, body {
   overflow: hidden;
   height: 100%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate {
+  background-size: 200% 200%;
+  animation: gradient 10s linear infinite;
 }

@@ -1,13 +1,20 @@
 // components/Intro
+"use client"
 import Image from "next/image";
 import { motion } from "motion/react";
+import React from "react";
 
 const Intro = () => {
+  const [visible, setVisible] = React.useState<boolean>(true);
+
+  if (!visible) return null;
+
   return <motion.div
     className="w-full h-full bg-[#1F2A21] flex justify-center items-center"
     initial={{ opacity: 100 }}
     animate={{ opacity: 0 }}
     transition={{ delay: 3, duration: 1}}
+    onAnimationComplete={() => setVisible(false)}
   >
     <motion.div
       initial={{ opacity: 0 }}

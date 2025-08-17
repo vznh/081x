@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Screen = () => {
-  return <div className="relative rounded-xs  overflow-hidden w-[338px] h-[287px] px-6 py-8 border-2 border-opacity-5 border-black">
+  return <div className="relative rounded-xs  overflow-hidden w-[400px] h-[300px] px-6 py-8 border-2 border-opacity-20 border-black">
     <Image
       src={"/gradient.png"}
       alt="Gradient for screenbg."
@@ -30,31 +30,34 @@ const Screen = () => {
         </span>
       </div>
 
-      <div className="w-[338px] h-px bg-white opacity-10 my-4 -mx-6" />
+      <div className="w-[400px] h-px bg-white opacity-10 my-4 -mx-6" />
 
       <div className="flex flex-row justify-between items-center">
+        <button>
+          <Link
+            className="font-PPNeuebit text-white hover:text-[#FFAE00] opacity-60 flex flex-row gap-x-2 text-lg border rounded-sm px-2 border-white border-opacity-10 items-center"
+            href=""
+            target="_blank"
+          >
+            <Pencil2Icon className="w-4 h-4" />
+            <span className="cursor-pointer">Preorder your own beverage</span>
+          </Link>
+
+        </button>
         <Link
-          className="font-PPNeuebit opacity-60 text-white flex flex-row gap-x-2 text-lg border rounded-sm px-2 border-white border-opacity-10 items-center"
-          href=""
-          target="_blank"
-        >
-          <Pencil2Icon className="w-4 h-4" />
-          Preorder your own drink
-        </Link>
-        <Link
-          className="font-PPNeuebit opacity-60 text-white flex flex-row gap-x-2 text-lg border rounded-sm px-2 border-white border-opacity-10 items-center"
+          className="font-PPNeuebit opacity-60  text-white hover:text-[#FFAE00] flex flex-row gap-x-2 text-lg border rounded-sm px-2 border-white border-opacity-10 items-center"
           href=""
           target="_blank"
         >
           <IdCardIcon className="w-4 h-4" />
-          <span className="cursor-pointer hover:text-[#00FF22]">RSVP for us!</span>
+          <span className="cursor-pointer">RSVP for your spot</span>
         </Link>
 
       </div>
 
-      <div className="w-[338px] h-px bg-white opacity-10 my-4 -mx-6" />
+      <div className="w-[400px] h-px bg-white opacity-10 my-4 -mx-6" />
 
-      <span className="font-PPNeuebit opacity-30 text-2xl text-white">
+      <span className="font-PPNeuebit opacity-20 text-2xl text-white">
         To be infused on August 20th, 2025
       </span>
     </motion.div>
