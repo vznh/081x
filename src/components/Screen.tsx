@@ -26,7 +26,7 @@ const Screen = () => {
           BYOM at W***e&apos;s house.
         </span>
         <span className="font-PPNeuebit text-white text-opacity-40 text-3xl break-words justify-stretch">
-          W___e&apos;s home at 1:00pm. Bring your own mug!
+          W***e&apos;s home at 1:00pm. Bring your own mug! Nintendo Switch optional.
         </span>
       </div>
 

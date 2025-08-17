@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Home() {
   { /* get a texture in the back that's moving? */ }
   return (
-    <main className="inset-0 overflow-hidden w-screen h-screen relative animate  bg-[linear-gradient(90deg,_#a55f30,_#3f2412,_#a55f30)]  bg-opacity-100">
+    <main className="inset-0 overflow-hidden w-screen h-screen relative animate bg-gradient-to-r from-[#3f2412] via-[#A55F30] to-[#3f2412] bg-opacity-100">
       <Image
         src={"/assets/grinderR.png"}
         alt="Espresso grinder reflection in glass behind."

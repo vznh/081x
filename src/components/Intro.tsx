@@ -10,7 +10,7 @@ const Intro = () => {
   if (!visible) return null;
 
   return <motion.div
-    className="w-full h-full bg-[#1F2A21] flex justify-center items-center"
+    className="w-full h-full bg-[_#3f2412] flex justify-center items-center"
     initial={{ opacity: 100 }}
     animate={{ opacity: 0 }}
     transition={{ delay: 3, duration: 1}}
