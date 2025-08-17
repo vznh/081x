@@ -1,11 +1,24 @@
 "use client";
+import React from "react";
 import { Screen } from "@/components/Screen";
 import { Background } from "@/components/Background";
 import { Intro } from "@/components/Intro";
+import { Knob } from "@/components/Knob";
 import Image from "next/image";
 
 export default function Home() {
-  { /* get a texture in the back that's moving? */ }
+  const [amt, setAmt] = React.useState<number>(0.2); // [0.2 -> 0.8], indicating the amt of espresso grinds
+  const [isMobile, setIsMobile] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <main className="inset-0 overflow-hidden w-screen h-screen relative animate bg-gradient-to-r from-[#3f2412] via-[#A55F30] to-[#3f2412] bg-opacity-100">
       <Image
@@ -39,19 +52,17 @@ export default function Home() {
         className="absolute top-0 right-16 z-20"
       />
 
-      <div
-        className="absolute top-24 left-8 z-50">
+      <div className="absolute top-24 left-8 z-50">
         <Screen />
       </div>
 
-      <div className="absolute bottom-32 left-[8.5rem] z-30">
-        <Image
-          src="/assets/knob.png"
-          alt="Knob"
-          width={204}
-          height={204}
-          priority
-          />
+      <div className="absolute bottom-20 left-[5rem] z-30">
+        <Knob
+          onChange={(angle) => {
+            const normalizedValue = (angle - -135) / (135 - -135); // Convert to 0-1 range (-135° to 135°)
+            setAmt(0.2 + normalizedValue * 0.6); // Map to 0.2-0.8 range
+          }}
+        />
       </div>
 
       <Image
@@ -67,13 +78,11 @@ export default function Home() {
         <Background />
       </div>
 
-      <span className="text-white opacity-100 text-lg font-PPNeuebit z-50 top-0 right-0">
-      </span>
+      <span className="text-white opacity-100 text-lg font-PPNeuebit z-50 top-0 right-0"></span>
 
       <div className="pointer-events-none absolute inset-0 z-50">
         <Intro />
       </div>
-
     </main>
   );
 }
