@@ -37,7 +37,7 @@ const Screen = () => {
         <button>
           <Link
             className="font-PPNeuebit text-white hover:text-[#FFAE00] opacity-60 flex flex-row gap-x-2 text-lg border rounded-sm px-2 border-white border-opacity-10 items-center"
-            href=""
+            href="https://tally.so/r/wbQ0vZ"
             target="_blank"
           >
             <Pencil2Icon className="w-4 h-4" />
@@ -47,7 +47,7 @@ const Screen = () => {
         </button>
         <Link
           className="font-PPNeuebit opacity-60  text-white hover:text-[#FFAE00] flex flex-row gap-x-2 text-lg border rounded-sm px-2 border-white border-opacity-10 items-center"
-          href=""
+          href="https://tally.so/r/wbQ0vZ"
           target="_blank"
         >
           <IdCardIcon className="w-4 h-4" />
