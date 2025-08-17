@@ -35,7 +35,7 @@ export default function Home() {
         src={"/assets/steamer.png"}
         alt="Espresso machine steamer asset."
         width={240}
-        height={1626}
+        height={1226}
         className="absolute top-0 right-16 z-20"
       />
 
