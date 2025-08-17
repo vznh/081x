@@ -67,9 +67,13 @@ export default function Home() {
         <Background />
       </div>
 
+      <span className="text-white opacity-100 text-lg font-PPNeuebit z-50 top-0 right-0">
+      </span>
+
       <div className="pointer-events-none absolute inset-0 z-50">
         <Intro />
       </div>
+
     </main>
   );
 }

@@ -1,14 +1,34 @@
 // components/Screen
 "use client"
 import { Pencil2Icon, IdCardIcon } from "@radix-ui/react-icons";
+import React from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 
 const Screen = () => {
+  const [ct, setCt] = React.useState<number>(0);
+
+  React.useEffect(() => {
+    const init = async () => {
+      try {
+        const response = await fetch("/headcount");
+        const data = await response.json();
+
+        if (data.success && data.headcount !== undefined) {
+          setCt(data.headcount);
+        }
+      } catch {
+        // fall back to no headcount
+      }
+    };
+
+    init();
+  }, []);
+
   return <div className="relative rounded-xs  overflow-hidden w-[400px] h-[310px] px-6 py-8 border-2 border-opacity-20 border-black">
     <Image
-      src={"/gradient.png"}
+      src={"/assets/gradient.png"}
       alt="Gradient for screenbg."
       fill
       priority
@@ -57,7 +77,7 @@ const Screen = () => {
 
       <div className="w-[400px] h-px bg-white opacity-10 my-4 -mx-6" />
 
-      <span className="font-PPNeuebit text-white opacity-20 py-2 ">HEADCOUNT 1</span>
+      <span className="font-PPNeuebit text-white opacity-20 py-2 ">HEADCOUNT {ct}</span>
     </motion.div>
   </div>
 };
