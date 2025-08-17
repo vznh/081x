@@ -25,7 +25,7 @@ const Intro = () => {
         ease: "linear"
       }}
     >
-      <Image src={"/logo.png"} alt="Logo." width={250} height={250} priority />
+      <Image src={"/meta/logo.png"} alt="Logo." width={250} height={250} priority />
     </motion.div>
   </motion.div>
 }
